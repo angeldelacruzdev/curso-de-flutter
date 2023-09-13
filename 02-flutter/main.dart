@@ -1,11 +1,18 @@
 void main() {
-  final Map<String, dynamic> pokemon = {
-    'name': 'Ditto',
-    'hp': 100,
-    'isAlive': true,
-    'sprites': {1: 'ditto/front', 2: 'ditto/back'}
-  };
+  final Hero wolverine = Hero(name: "Pikachu", power: "1000");
 
-  print(pokemon['sprites'][1]);
-  print(pokemon['sprites'][2]);
+  print(wolverine);
+  print(wolverine.name);
+  print(wolverine.power);
+}
+
+class Hero {
+  String name = "";
+  String power = "";
+
+  Hero({required this.name, this.power = "Sin poder"});
+
+  String toString() {
+    return "$name - $power";
+  }
 }
